@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manya Sachdeva — Backend Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <span class="nav-logo">MS<span class="nav-dot">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+<div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line">Manya</span>
+          <span class="name-line gradient-text">Sachdeva</span>
+        </h1>
+        <p class="hero-role">Backend Engineer · Distributed Systems · AI Systems</p>
+        <p class="hero-desc">
+          Building systems that handle millions of requests at Adobe —
+          from event-driven Kafka pipelines to LLM-powered MCP servers.
+          I make things fast, reliable, and scalable.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">
+            <span>View My Work</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="mailto:manyasachdeva22@gmail.com" class="btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://linkedin.com/in/manya-sachdeva" target="_blank" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/manyasachdeva" target="_blank" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="stats-grid">
+          <div class="stat-card stat-purple">
+            <div class="stat-value">800K<span>+</span></div>
+            <div class="stat-label">Requests/min</div>
+            <div class="stat-icon">⚡</div>
+          </div>
+          <div class="stat-card stat-pink">
+            <div class="stat-value">70<span>%</span></div>
+            <div class="stat-label">P99 latency cut</div>
+            <div class="stat-icon">📉</div>
+          </div>
+          <div class="stat-card stat-blue">
+            <div class="stat-value">90<span>%</span></div>
+            <div class="stat-label">Infra cost saved</div>
+            <div class="stat-icon">💰</div>
+          </div>
+          <div class="stat-card stat-green">
+            <div class="stat-value">2M<span>+</span></div>
+            <div class="stat-label">Users served</div>
+            <div class="stat-icon">👥</div>
+          </div>
+        </div>
+        <div class="hero-company-badge">
+          <div class="company-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 2.4l8.1 4.65v9.3L12 21.6l-8.1-4.65v-9.3L12 2.4z" fill="#FF0000"/></svg>
+          </div>
+          <div>
+            <div class="company-name">Adobe Systems</div>
+            <div class="company-role">Member of Technical Staff 2</div>
+          </div>
+          <div class="company-status">
+            <span class="status-dot"></span> Current
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Career</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-track"></div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <div class="tc-company-row">
+                <span class="tc-company">Adobe Systems</span>
+                <span class="tc-badge">Current</span>
+              </div>
+              <span class="tc-period">Jan 2026 – Present</span>
+            </div>
+            <h3 class="tc-role">Member of Technical Staff 2</h3>
+            <ul class="tc-bullets">
+              <li>Consolidated executable API documentation for <mark>6+ Document Cloud services</mark> onto a unified internal platform — replacing scattered wiki links with a single site where teams can browse docs and execute/validate APIs directly, eliminating the need for external tools like Postman and reducing API integration time by <mark>80%</mark>.</li>
+              <li>Extended the platform to build an <strong>MCP server</strong> enabling natural language API execution from the CLI — allowing actions like "share this PDF with ABC" to be performed directly via the OpenAPI spec without manual curl construction.</li>
+              <li>Contributed to core API implementations for Acrobat's <strong>AI content creation service</strong> (presentations, podcasts, and audio notes from PDFs), scaling to <mark>100K+ RPM</mark> at <mark>144ms P95 latency</mark>.</li>
+              <li>Identified high-latency upstream dependencies in Acrobat's sharing and collaboration APIs; conducted latency POC, sourced alternative upstreams, and re-architected the data-fetch layer using <strong>GraphQL aggregation with parallel async calls</strong> — cutting P99 latency by <mark>70%</mark>.</li>
+              <li>Diagnosed recurring production failures caused by YAML config errors that bypassed standard validation; built a <strong>Python-based schema validator</strong> integrated into the CI/CD build step via GitHub Actions — catching issues pre-deployment.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>MCP</span><span>OpenAPI</span><span>GraphQL</span><span>Spring Boot</span><span>LLM</span><span>GitHub Actions</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <div class="tc-company-row">
+                <span class="tc-company">Adobe Systems</span>
+                <span class="tc-award">⭐ Spot Award</span>
+              </div>
+              <span class="tc-period">Jul 2024 – Dec 2025</span>
+            </div>
+            <h3 class="tc-role">Member of Technical Staff 1</h3>
+            <ul class="tc-bullets">
+              <li>Designed a real-time event-driven activity service consuming user collaboration events (views, shares, comments, replies) from <strong>Kafka pipelines</strong>; engineered workers to process and ingest structured data into <strong>DynamoDB</strong> with optimized schema design using LSI/GSI indexes — serving <mark>2M+ users</mark> across Acrobat.</li>
+              <li>Owned Acrobat's central content discovery service (<mark>800K+ RPM</mark>) — the entry point providing links and schemas for DC and GenAI services across Acrobat; onboarded multiple teams, drove cross-team API integrations, led <strong>CI/CD pipeline migration</strong> across 3 services, and extended the service to new regions and data centers.</li>
+              <li>Migrated <mark>300+ feature flags</mark> across platforms with <strong>zero downtime</strong> in an active production service.</li>
+              <li>Introduced cache eviction strategies to reduce upstream load; led infrastructure migration from <strong>Redis → Valkey</strong>, cutting costs by <mark>90%</mark> while maintaining latency SLAs.</li>
+              <li>Built an internal <strong>API response comparison tool</strong> combining response capture, dynamic field normalization, and side-by-side diff into a single workflow — reducing regression validation time from ~20 minutes to <mark>3–4 minutes</mark> (85% reduction).</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Kafka</span><span>DynamoDB</span><span>LSI/GSI</span><span>Redis</span><span>Valkey</span><span>CI/CD</span><span>Microservices</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <span class="tc-company">Adobe Systems</span>
+              <span class="tc-period">Jan 2024 – Jul 2024</span>
+            </div>
+            <h3 class="tc-role">Software Engineering Intern</h3>
+            <ul class="tc-bullets">
+              <li>Developed a Task Management System for Acrobat Web enabling users to create, assign, and track tasks related to shared collaboration activities — for oneself or others in a shared activity.</li>
+              <li>Implemented backend Java Spring Boot APIs for task creation, retrieval, and management, including custom reminders and pending task tracking, with <strong>GDPR-compliant audit logs</strong> and real-time updates across users.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>GDPR</span><span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-top">
+              <span class="tc-company">Adobe Systems</span>
+              <span class="tc-period">May 2023 – Jul 2023</span>
+            </div>
+            <h3 class="tc-role">Product Intern</h3>
+            <ul class="tc-bullets">
+              <li>Developed an AI-driven commenting system for Acrobat providing context-aware autocomplete and reply suggestions using full-document retrieval, enabling real-time guidance for users.</li>
+              <li>Designed the backend pipeline including <strong>prompt engineering, RAG context retrieval, and API orchestration</strong>, ensuring low-latency responses suitable for internal stakeholder evaluation.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>RAG</span><span>Prompt Engineering</span><span>Vector Search</span><span>LLM</span><span>FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Toolkit</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skill-block reveal">
+          <div class="skill-block-icon">{ }</div>
+          <h3>Languages</h3>
+          <div class="skill-pills">
+            <span class="pill-java">Java</span>
+            <span class="pill-py">Python</span>
+            <span class="pill-cpp">C++</span>
+            <span class="pill-sql">SQL</span>
+          </div>
+        </div>
+        <div class="skill-block reveal">
+          <div class="skill-block-icon">⚙</div>
+          <h3>Backend</h3>
+          <div class="skill-pills">
+            <span>Spring Boot</span><span>FastAPI</span><span>Kafka</span>
+            <span>GraphQL</span><span>REST</span><span>Microservices</span>
+          </div>
+        </div>
+        <div class="skill-block reveal">
+          <div class="skill-block-icon">☁</div>
+          <h3>Infrastructure</h3>
+          <div class="skill-pills">
+            <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+            <span>DynamoDB</span><span>PostgreSQL</span><span>Redis</span><span>Grafana</span>
+          </div>
+        </div>
+        <div class="skill-block reveal">
+          <div class="skill-block-icon">✦</div>
+          <h3>AI & LLM</h3>
+          <div class="skill-pills ai">
+            <span>RAG</span><span>MCP</span><span>LangGraph</span><span>Qdrant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Built</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-icon">🤖</div>
+            <div class="project-status-badges">
+              <span class="project-status-badge badge-ai">✦ AI-Powered</span>
+              <span class="project-status-badge badge-personal">Personal Project</span>
+            </div>
+          </div>
+          <h3 class="project-name">PrepBuddy</h3>
+          <p class="project-type">AI Career Preparation Platform</p>
+          <ul class="project-bullets">
+            <li>Engineered a full-stack platform using <strong>FastAPI, PostgreSQL & SQLAlchemy</strong> with JWT-secured REST APIs for skill tracking, goal planning, job applications, notes, and collaborative partner progress sharing.</li>
+            <li>Designed a multi-agent AI system with <strong>LangGraph + MCP tools</strong>, backed by a RAG pipeline (Qdrant + sentence-transformers) for semantic retrieval over resumes, job descriptions, and notes — enabling context-aware chat, interview practice, and automated skill & goal recommendations.</li>
+          </ul>
+          <div class="project-tags">
+            <span>FastAPI</span><span>PostgreSQL</span><span>LangGraph</span><span>Qdrant</span><span>RAG</span><span>MCP</span><span>Multi-agent</span>
+          </div>
+        </div>
+
+        <div class="project-card project-card-alt reveal">
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-icon">🎨</div>
+            <span class="project-link-btn shipped">🏆 Top 10 · Adobe Hackathon</span>
+          </div>
+          <h3 class="project-name">StudySpace Community Gallery</h3>
+          <p class="project-type">Adobe Internal Hackathon</p>
+          <p class="project-desc">
+            Extended Adobe's existing StudySpace platform with a community gallery where students can publish their spaces for others to discover. Features an owner-driven approval workflow before publication, plus social interactions — follow, like, and share spaces — driving engagement and collaboration across the student community.
+          </p>
+          <div class="project-tags">
+            <span>Social Workflow</span><span>Approval System</span><span>Community</span><span>Full-stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Recognition</span>
+        <h2 class="section-title">Awards</h2>
+      </div>
+      <div class="awards-grid">
+
+        <div class="award-card award-gold reveal">
+          <div class="award-shine"></div>
+          <div class="award-emoji">🏆</div>
+          <h3>Palantir Women in Tech Scholarship</h3>
+          <p class="award-highlight">Globally competitive scholarship awarded to just 10 students worldwide — selected as one of the recipients for academic and technical excellence. Prize: $7,000.</p>
+          <p class="award-year">2023</p>
+        </div>
+
+        <div class="award-card award-silver reveal">
+          <div class="award-shine"></div>
+          <div class="award-emoji">🥇</div>
+          <h3>Twitter DevelopHer India</h3>
+          <p class="award-highlight">Selected among top 30 out of 9,000+ applicants for an exclusive 2-day workshop and engagement with the Twitter team — featuring learning sessions and live competitions. Secured <strong>1st place</strong> in the team coding challenge.</p>
+          <p class="award-year">2021</p>
+        </div>
+
+        <div class="award-card award-purple reveal">
+          <div class="award-shine"></div>
+          <div class="award-emoji">⭐</div>
+          <h3>Adobe Spot Award</h3>
+          <p class="award-highlight">Awarded for sustained contributions to Acrobat's content discovery service — onboarding multiple team APIs and delivering high-impact enhancements recognized across the org.</p>
+          <p class="award-year">2025</p>
+        </div>
+
+<div class="award-card award-gold reveal">
+          <div class="award-shine"></div>
+          <div class="award-emoji">👩‍💻</div>
+          <h3>Grace Hopper Celebration Scholar</h3>
+          <p class="award-highlight">Awarded a GHC 2023 Student Scholarship by AnitaB.org — selected as a scholar to attend the Grace Hopper Celebration, the world's largest gathering of women in tech.</p>
+          <p class="award-year">2023</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Foundation</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-left">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <h3>Indira Gandhi Delhi Technical University for Women</h3>
+            <p>B.Tech — Computer Science Engineering · Delhi, India</p>
+            <p class="edu-period">Dec 2020 – May 2024</p>
+          </div>
+        </div>
+        <div class="edu-right">
+          <div class="cgpa-ring">
+            <span class="cgpa-value">8.40</span>
+            <span class="cgpa-label">CGPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="contact-glow-1"></div>
+        <div class="contact-glow-2"></div>
+        <p class="section-eyebrow" style="text-align:center;margin-bottom:16px">Let's talk</p>
+        <h2 class="contact-heading">Open to backend<br>& AI engineering roles.</h2>
+        <p class="contact-sub">Based in India · Open to relocate worldwide · 2 years at Adobe</p>
+        <div class="contact-actions">
+          <a href="mailto:manyasachdeva22@gmail.com" class="btn-primary">
+            <span>Send Email</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/manya-sachdeva" target="_blank" class="btn-ghost">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="footer-logo">MS<span class="nav-dot">.</span></span>
+    <p>Manya Sachdeva · Backend Engineer · 2026</p>
+    <p class="footer-sub">Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
