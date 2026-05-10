@@ -132,7 +132,7 @@
               <li>Engineered production APIs for Acrobat's <strong>AI content creation service</strong>, supporting PDF-to-presentation, podcast, and audio-note workflows; the service handled <mark>100K+ RPM</mark> at <mark>144ms P95 latency</mark> through structured logging, retries, and latency-focused API design.</li>
               <li>Profiled latency bottlenecks in Acrobat's collaboration APIs, validated upstream alternative through a structured POC, and re-architected the data-fetch layer using <strong>parallel GraphQL aggregation </strong> and asynchronous API calls, reducing P99 latency by <mark>70%</mark>.</li>
               <li>Built an <strong>executable API documentation platform</strong> for <mark>6+ backend services</mark> using OpenAPI/Swagger spec — enabling in-place API browsing, execution, and response validation; extended the platform with an <strong>MCP server</strong> for LLM-driven natural language invocation of backend API workflows through CLI tooling.</li>
-              <li>Integrated a <strong> YAML schema validation </strong> step into the CI/CD build pipeline — running automated field-level checks on every PR to catch field-level config defects, preventing recurring production incidents.</li>
+              <li>Integrated a <strong> YAML schema validation </strong> step into the CI/CD build pipeline using <mark>Github Actions</mark> — running automated field-level checks on every PR to catch field-level config defects, preventing recurring production incidents.</li>
             </ul>
             <div class="tc-tags">
               <span>Spring Boot</span><span>GraphQL</span><span>OpenAPI</span><span>MCP</span><span>GitHub Actions</span><span>Grafana</span><span>Splunk</span><span>Python</span>
