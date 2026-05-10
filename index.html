@@ -20,7 +20,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
 
@@ -38,13 +38,14 @@
         </h1>
         <p class="hero-role">Backend Engineer · Distributed Systems · AI Systems</p>
         <p class="hero-desc">
-          Building systems that handle millions of requests at Adobe —
-          from event-driven Kafka pipelines to LLM-powered MCP servers.
-          I make things fast, reliable, and scalable.
+          Backend engineer at Adobe designing and owning production systems at scale —
+          event-driven Kafka pipelines, high-throughput REST/GraphQL APIs, and distributed
+          services handling 800K+ RPM across Acrobat. Two years delivering reliable
+          backend infrastructure for tens of millions of users.
         </p>
         <div class="hero-actions">
           <a href="#experience" class="btn-primary">
-            <span>View My Work</span>
+            <span>View Experience</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="mailto:manyasachdeva22@gmail.com" class="btn-ghost">Get in Touch</a>
@@ -80,7 +81,7 @@
           </div>
           <div class="stat-card stat-green">
             <div class="stat-value">2M<span>+</span></div>
-            <div class="stat-label">Users served</div>
+            <div class="stat-label">Users (Acrobat)</div>
             <div class="stat-icon">👥</div>
           </div>
         </div>
@@ -128,14 +129,14 @@
             </div>
             <h3 class="tc-role">Member of Technical Staff 2</h3>
             <ul class="tc-bullets">
-              <li>Consolidated executable API documentation for <mark>6+ Document Cloud services</mark> onto a unified internal platform — replacing scattered wiki links with a single site where teams can browse docs and execute/validate APIs directly, eliminating the need for external tools like Postman and reducing API integration time by <mark>80%</mark>.</li>
-              <li>Extended the platform to build an <strong>MCP server</strong> enabling natural language API execution from the CLI — allowing actions like "share this PDF with ABC" to be performed directly via the OpenAPI spec without manual curl construction.</li>
-              <li>Contributed to core API implementations for Acrobat's <strong>AI content creation service</strong> (presentations, podcasts, and audio notes from PDFs), scaling to <mark>100K+ RPM</mark> at <mark>144ms P95 latency</mark>.</li>
-              <li>Identified high-latency upstream dependencies in Acrobat's sharing and collaboration APIs; conducted latency POC, sourced alternative upstreams, and re-architected the data-fetch layer using <strong>GraphQL aggregation with parallel async calls</strong> — cutting P99 latency by <mark>70%</mark>.</li>
-              <li>Diagnosed recurring production failures caused by YAML config errors that bypassed standard validation; built a <strong>Python-based schema validator</strong> integrated into the CI/CD build step via GitHub Actions — catching issues pre-deployment.</li>
+              <li>Engineered production APIs for Acrobat's <strong>AI content creation service</strong>, supporting PDF-to-presentation, podcast, and audio-note workflows; the service handled <mark>100K+ RPM</mark> at <mark>144ms P95 latency</mark> through structured logging, retries, and latency-focused API design.</li>
+              <li>Profiled latency bottlenecks in Acrobat's collaboration APIs, validated upstream alternative through a structured POC, and re-architected the data-fetch layer using <strong>parallel GraphQL aggregation </strong> and asynchronous API calls, reducing P99 latency by <mark>70%</mark>.</li>
+              <li>Built an <strong>executable API documentation platform</strong> for <mark>6+ backend services</mark> using OpenAPI/Swagger spec enabling in-place browsing, execution, and validation of APIs and reducing integration time by <mark>80%</mark>.</li>
+              <li>Implemented an <strong>MCP server</strong> on top of the API platform enabling LLM-driven natural language execution of backend API workflows through CLI, improving internal developer usability.</li>
+              <li>Integrated a <strong> YAML schema validation </strong> step into the CI/CD build pipeline — running automated field-level checks on every PR to catch field-level config defects, preventing recurring production incidents.</li>
             </ul>
             <div class="tc-tags">
-              <span>MCP</span><span>OpenAPI</span><span>GraphQL</span><span>Spring Boot</span><span>LLM</span><span>GitHub Actions</span><span>Python</span>
+              <span>Spring Boot</span><span>GraphQL</span><span>OpenAPI</span><span>MCP</span><span>GitHub Actions</span><span>Grafana</span><span>Splunk</span><span>Python</span>
             </div>
           </div>
         </div>
@@ -152,14 +153,13 @@
             </div>
             <h3 class="tc-role">Member of Technical Staff 1</h3>
             <ul class="tc-bullets">
-              <li>Designed a real-time event-driven activity service consuming user collaboration events (views, shares, comments, replies) from <strong>Kafka pipelines</strong>; engineered workers to process and ingest structured data into <strong>DynamoDB</strong> with optimized schema design using LSI/GSI indexes — serving <mark>2M+ users</mark> across Acrobat.</li>
-              <li>Owned Acrobat's central content discovery service (<mark>800K+ RPM</mark>) — the entry point providing links and schemas for DC and GenAI services across Acrobat; onboarded multiple teams, drove cross-team API integrations, led <strong>CI/CD pipeline migration</strong> across 3 services, and extended the service to new regions and data centers.</li>
-              <li>Migrated <mark>300+ feature flags</mark> across platforms with <strong>zero downtime</strong> in an active production service.</li>
-              <li>Introduced cache eviction strategies to reduce upstream load; led infrastructure migration from <strong>Redis → Valkey</strong>, cutting costs by <mark>90%</mark> while maintaining latency SLAs.</li>
-              <li>Built an internal <strong>API response comparison tool</strong> combining response capture, dynamic field normalization, and side-by-side diff into a single workflow — reducing regression validation time from ~20 minutes to <mark>3 minutes</mark> (85% reduction).</li>
+              <li>Designed and implemented a real-time <strong>event-driven activity service</strong> for Acrobat — consumed collaboration events (views, shares, comments, replies) from Kafka topics, built parallel processing workers, and engineered DynamoDB ingestion with <strong>LSI/GSI schema design</strong> for efficient access patterns; system serves <mark>2M+ users</mark> across Acrobat's collaboration surface.</li>
+              <li>Owned Acrobat's central content discovery service at <mark>800K+ RPM</mark> — the unified API entry point for DC and GenAI surfaces; built <strong>Grafana and Splunk observability dashboards</strong> used for incident triage, migrated <mark>300+ feature flags with zero downtime</mark>, and led cross-team API onboarding; recognized with <strong>Adobe Spot Award</strong> for sustained delivery and cross-team execution.</li>
+              <li>Evaluated <strong>Valkey</strong> as an open-source Redis replacement — designed and ran a structured latency and throughput benchmarking POC, led the production migration across multiple services, and implemented a <strong>cache eviction strategy</strong> for high-frequency response fields to reduce upstream service load; reduced infrastructure costs by <mark>90%</mark> while maintaining all latency SLAs.</li>
+              <li>Streamlined multi-step API regression validation across deployments by designing and building an internal tool — automated response capture, dynamic field normalization, and diff comparison into a single workflow, reducing validation time from 20 minutes to under 4 minutes per deployment — an <mark>85% reduction</mark>.</li>
             </ul>
             <div class="tc-tags">
-              <span>Kafka</span><span>DynamoDB</span><span>LSI/GSI</span><span>Redis</span><span>Valkey</span><span>CI/CD</span><span>Microservices</span>
+              <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>DynamoDB</span><span>Redis</span><span>Valkey</span><span>Grafana</span><span>Splunk</span><span>On-call</span><span>Microservices</span>
             </div>
           </div>
         </div>
@@ -173,11 +173,11 @@
             </div>
             <h3 class="tc-role">Software Engineering Intern</h3>
             <ul class="tc-bullets">
-              <li>Developed a Task Management System for Acrobat Web enabling users to create, assign, and track tasks related to shared collaboration activities — for oneself or others in a shared activity.</li>
-              <li>Implemented backend Java Spring Boot APIs for task creation, retrieval, and management, including custom reminders and pending task tracking, with <strong>GDPR-compliant audit logs</strong> and real-time updates across users.</li>
+              <li>Built a <strong>Task Management System</strong> for Acrobat Web — engineered Spring Boot APIs for task creation, assignment, reminders, and activity tracking; implemented a <strong>React UI</strong> surfacing pending tasks and real-time updates to collaborators, with GDPR-compliant audit logs via Kafka.</li>
+              <li>Adopted as a beta across <mark>5 product teams</mark> within the org; work quality led to the project being scoped for production rollout across Acrobat post-internship.</li>
             </ul>
             <div class="tc-tags">
-              <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>GDPR</span><span>REST APIs</span>
+              <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>React</span><span>GDPR</span><span>REST APIs</span>
             </div>
           </div>
         </div>
@@ -191,11 +191,11 @@
             </div>
             <h3 class="tc-role">Product Intern</h3>
             <ul class="tc-bullets">
-              <li>Developed an AI-driven commenting system for Acrobat providing context-aware autocomplete and reply suggestions using full-document retrieval, enabling real-time guidance for users.</li>
-              <li>Designed the backend pipeline including <strong>prompt engineering, RAG context retrieval, and API orchestration</strong>, ensuring low-latency responses suitable for internal stakeholder evaluation.</li>
+              <li>Built an <strong>AI-powered comment assistance system</strong> for Acrobat — generated context-aware autocomplete and reply suggestions grounded in document content, highlighted text, and surrounding context using <strong>document embeddings and HuggingFace LLM APIs</strong>.</li>
+              <li>Designed a <strong>PII-masked user persona pipeline</strong> — stripped sensitive fields (names, emails, contact details) from user activity, then derived a behavioural profile from comment history, interaction patterns, and org-role signals to personalise suggestions in real time.</li>
             </ul>
             <div class="tc-tags">
-              <span>RAG</span><span>Prompt Engineering</span><span>Vector Search</span><span>LLM</span><span>FastAPI</span>
+              <span>LLM</span><span>HuggingFace</span><span>Embeddings</span><span>RAG</span><span>Prompt Engineering</span><span>PII Masking</span>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@
           <h3>Infrastructure</h3>
           <div class="skill-pills">
             <span>AWS</span><span>Docker</span><span>Kubernetes</span>
-            <span>DynamoDB</span><span>PostgreSQL</span><span>Redis</span><span>Grafana</span>
+            <span>DynamoDB</span><span>PostgreSQL</span><span>Redis</span><span>Grafana</span><span>Splunk</span>
           </div>
         </div>
         <div class="skill-block reveal">
@@ -269,8 +269,8 @@
           <h3 class="project-name">PrepBuddy</h3>
           <p class="project-type">AI Career Preparation Platform</p>
           <ul class="project-bullets">
-            <li>Engineered a full-stack platform using <strong>FastAPI, PostgreSQL & SQLAlchemy</strong> with JWT-secured REST APIs for skill tracking, goal planning, job applications, notes, and collaborative partner progress sharing.</li>
-            <li>Designed a multi-agent AI system with <strong>LangGraph + MCP tools</strong>, backed by a RAG pipeline (Qdrant + sentence-transformers) for semantic retrieval over resumes, job descriptions, and notes — enabling context-aware chat, interview practice, and automated skill & goal recommendations.</li>
+            <li>Architected a <strong>multi-tenant FastAPI backend</strong> with PostgreSQL and SQLAlchemy ORM — designed normalized schema covering skill tracking, goal planning, job application state, and partner-sharing access control with JWT-based stateless authentication.</li>
+            <li>Engineered a <strong>multi-agent AI system</strong> using LangGraph with MCP tool bindings, backed by a RAG pipeline (Qdrant + sentence-transformers) for semantic retrieval over resumes, job descriptions, and notes — agents handle context-aware interview practice, skill gap analysis, and automated goal recommendations.</li>
           </ul>
           <div class="project-tags">
             <span>FastAPI</span><span>PostgreSQL</span><span>LangGraph</span><span>Qdrant</span><span>RAG</span><span>MCP</span><span>Multi-agent</span>
@@ -286,7 +286,7 @@
           <h3 class="project-name">StudySpace Community Gallery</h3>
           <p class="project-type">Adobe Internal Hackathon</p>
           <p class="project-desc">
-            Extended Adobe's existing StudySpace platform with a community gallery where students can publish their spaces for others to discover. Features an owner-driven approval workflow before publication, plus social interactions — follow, like, and share spaces — driving engagement and collaboration across the student community.
+            Extended Adobe's StudySpace platform with a community publishing system — designed an owner-driven approval pipeline with explicit state transitions, implemented visibility and access controls, and built social interaction APIs with feed aggregation. Delivered full-stack under hackathon constraints; ranked Top 10 at Adobe internal hackathon.
           </p>
           <div class="project-tags">
             <span>Social Workflow</span><span>Approval System</span><span>Community</span><span>Full-stack</span>
@@ -390,7 +390,6 @@
   <footer class="footer">
     <span class="footer-logo">MS<span class="nav-dot">.</span></span>
     <p>Manya Sachdeva · Backend Engineer · 2026</p>
-    <p class="footer-sub">Built with HTML, CSS & JavaScript</p>
   </footer>
 
   <script src="script.js"></script>
