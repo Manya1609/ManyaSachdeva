@@ -132,7 +132,7 @@
               <li>Engineered production APIs for Acrobat's <strong>AI content creation service</strong>, supporting PDF-to-presentation, podcast, and audio-note workflows; the service handled <mark>100K+ RPM</mark> at <mark>144ms P95 latency</mark> through structured logging, retries, and latency-focused API design.</li>
               <li>Profiled latency bottlenecks in Acrobat's collaboration APIs, validated upstream alternative through a structured POC, and re-architected the data-fetch layer using <strong>parallel GraphQL aggregation </strong> and asynchronous API calls, reducing P99 latency by <mark>70%</mark>.</li>
               <li>Built an <strong>executable API documentation platform</strong> for <mark>6+ backend services</mark> using OpenAPI/Swagger spec — enabling in-place API browsing, execution, and response validation; extended the platform with an <strong>MCP server</strong> for LLM-driven natural language invocation of backend API workflows through CLI tooling.</li>
-              <li>Integrated a <strong> YAML schema validation </strong> step into the CI/CD build pipeline using <mark>Github Actions</mark> — running automated field-level checks to catch config defects, preventing recurring production incidents.</li>
+              <li>Integrated a <strong> YAML schema validation </strong> step into the CI/CD build pipeline — running automated field-level checks on every PR to catch field-level config defects, preventing recurring production incidents.</li>
             </ul>
             <div class="tc-tags">
               <span>Spring Boot</span><span>GraphQL</span><span>OpenAPI</span><span>MCP</span><span>GitHub Actions</span><span>Grafana</span><span>Splunk</span><span>Python</span>
@@ -152,7 +152,7 @@
             </div>
             <h3 class="tc-role">Member of Technical Staff 1</h3>
             <ul class="tc-bullets">
-              <li>Designed and implemented a real-time <strong>event-driven activity service</strong> for Acrobat — consumed collaboration events (views, shares, comments, replies) from Kafka topics, built parallel worker orchestration, and engineered DynamoDB ingestion with <strong>LSI/GSI schema design</strong> for efficient access patterns; system serves <mark>2M+ users</mark> across Acrobat's collaboration surface.</li>
+              <li>Designed and implemented a real-time <strong>event-driven activity service</strong> for Acrobat — consumed collaboration events (views, shares, comments, replies) from Kafka topics, built parallel workers orchestration, and engineered DynamoDB ingestion with <strong>LSI/GSI schema design</strong> for efficient access patterns; system serves <mark>2M+ users</mark> across Acrobat's collaboration surface.</li>
               <li>Owned Acrobat's central content discovery service at <mark>800K+ RPM</mark> — the unified API entry point for DC and GenAI surfaces; built <strong>Grafana and Splunk observability dashboards</strong> used for incident triage, migrated <mark>300+ feature flags with zero downtime</mark>, and led cross-team API onboarding; recognized with <strong>Adobe Spot Award</strong> for sustained delivery and cross-team execution.</li>
               <li>Evaluated <strong>Valkey</strong> as an open-source Redis replacement — designed and ran a structured latency and throughput benchmarking POC, led the production migration across multiple services, and implemented a <strong>cache eviction strategy</strong> for high-frequency response fields to reduce upstream service load; reduced infrastructure costs by <mark>90%</mark> while maintaining all latency SLAs.</li>
               <li>Streamlined multi-step API regression validation across deployments by designing and building an internal tool — automated response capture, dynamic field normalization, and diff comparison into a single workflow, reducing validation time from 20 minutes to under 4 minutes per deployment — an <mark>85% reduction</mark>.</li>
@@ -172,11 +172,11 @@
             </div>
             <h3 class="tc-role">Software Engineering Intern</h3>
             <ul class="tc-bullets">
-              <li>Built a <strong>Task Management System</strong> for Acrobat Web — engineered Spring Boot APIs for task creation, assignment, reminders, and activity tracking; implemented a <strong>React UI</strong> surfacing pending tasks and real-time updates to collaborators, with GDPR-compliant audit logs via Kafka.</li>
-              <li>Adopted as a beta across <mark>5 product teams</mark> within the org; work quality led to the project being scoped for production rollout across Acrobat post-internship.</li>
+              <li>Built a <strong>Task Management System</strong>, supporting self-assigned and collaborator-assigned tasks with deadline reminders; designed <strong>DynamoDB schema with LSI/GSI indexes</strong> to structure and query state transitions across pending comments, shared files, and active tasks.</li>
+              <li>Surfaced real-time task state via <strong>React UI</strong> with <strong>GDPR-compliant audit events on Kafka</strong>; adopted as internal beta across <mark>5 product teams</mark>, with work scoped for production rollout across Acrobat post-internship.</li>
             </ul>
             <div class="tc-tags">
-              <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>React</span><span>GDPR</span><span>REST APIs</span>
+              <span>Java</span><span>Spring Boot</span><span>DynamoDB</span><span>Kafka</span><span>React</span><span>GDPR</span><span>REST APIs</span>
             </div>
           </div>
         </div>
@@ -190,8 +190,8 @@
             </div>
             <h3 class="tc-role">Product Intern</h3>
             <ul class="tc-bullets">
-              <li>Built an <strong>AI-powered comment assistance system</strong> for Acrobat — generated context-aware autocomplete and reply suggestions grounded in document content, highlighted text, and surrounding context using <strong>document embeddings and HuggingFace LLM APIs</strong>.</li>
-              <li>Designed a <strong>PII-masked user persona pipeline</strong> — stripped sensitive fields (names, emails, contact details) from user activity, then derived a behavioural profile from comment history, interaction patterns, and org-role signals to personalise suggestions in real time.</li>
+              <li>Built an <strong>AI-powered commenting system</strong> for Acrobat — delivered context-aware <strong>autocomplete, comment and reply suggestions, and in-context email generation</strong> using <strong>document embeddings and HuggingFace LLM models</strong> grounded in document content, highlighted text, and surrounding context.</li>
+              <li>Designed a <strong>PII-masked user persona pipeline</strong> to derive behavioural intent from user history and activities to personalise suggestions in real time.</li>
             </ul>
             <div class="tc-tags">
               <span>LLM</span><span>HuggingFace</span><span>Embeddings</span><span>RAG</span><span>Prompt Engineering</span><span>PII Masking</span>
